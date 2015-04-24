@@ -22,4 +22,4 @@ del desarrollador ni de GitHub; toda la responsabilidad por el uso o
 modificación del código o de los archivos binarios quedará bajo la 
 exclusiva responsabilidad del usuario.
 
-Para más información, sírvase leer [la licencia](https://github.com/arielsbecker/android-escolazo/LICENSE).
+Para más información, sírvase leer [la licencia](https://github.com/arielsbecker/android-escolazo/blob/master/LICENSE).
