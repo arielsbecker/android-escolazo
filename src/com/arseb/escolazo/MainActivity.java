@@ -6,20 +6,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import java.util.Random;
 
-public class Generacion extends ActionBarActivity {
+
+public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_generacion);
-        }
+        setContentView(R.layout.activity_main);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.generacion, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -35,14 +35,15 @@ public class Generacion extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
     
-    public void generateRandomNumber(View view) {
-    	Random myNumberGenerator;
-    	int myLuckyNumber;
-    	myLuckyNumber=0;
-    	myNumberGenerator = new Random();
-    	myLuckyNumber=myNumberGenerator.nextInt(10000);
-        TextView textElement = (TextView) findViewById(R.id.textGeneratedNumber);
-        textElement.setText(Integer.toString(myLuckyNumber));
-    }
+    public void generarAleatorio(View view){
+    	// Al presionar el botón "Generar".
+    	GeneradorAzar myRandomGenerator = new GeneradorAzar();
+    	CharSequence myNumbers;
+    	TextView textElement = (TextView) findViewById(R.id.textGeneratedNumber);
+        textElement.setText(getString(R.string.defaultStartingValue));
+        //Valor hardcodeado por el momento para probar si devuelve los números necesarios para el Quini6.
+    	myNumbers = myRandomGenerator.testRandomNumber(45,6);
+    	textElement.setText(myNumbers);
 
+    }
 }
