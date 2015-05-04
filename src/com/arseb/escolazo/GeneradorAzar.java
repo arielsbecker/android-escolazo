@@ -16,7 +16,15 @@ public class GeneradorAzar {
 			if (howMany > 0){
 				for ( int i = 1; i < howMany + 1; i++ )	{		
 					Random myRandomGenerator = new Random();
-					myNumber = myRandomGenerator.nextInt(maxNumber);
+					/*
+					* Documentación Java:
+					* Returns a pseudorandom, uniformly distributed int
+					* value between 0 (inclusive) and the specified
+					* value (exclusive).
+					* Es necesario adicionar 1 al valor maxNumber, para
+					* que el valor máximo esté incluido.
+					*/
+					myNumber = myRandomGenerator.nextInt(maxNumber + 1);
 					strAux.append(Integer.toString(myNumber));
 					// Si el incremento del bucle no es el último, se agrega un separador de coma.
 					if (i < howMany){
@@ -25,7 +33,6 @@ public class GeneradorAzar {
 				}
 			}
 		}
-		// Este comando está sólo a fines de depuración.
 		return strAux.toString();
 	}
 
