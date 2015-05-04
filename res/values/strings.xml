@@ -4,7 +4,7 @@
     <string name="app_name">Escolazo</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-	<string name="default_value_generated_number">0000</string>
 	<string name="button_generate">Generar</string>
 	<string name="defaultStartingValue">----</string>
+	<string name="alfaVersionLabel">Esta versión es alfa, y sólo sirve para obtener números para el juego Loto 5.</string>
 </resources>

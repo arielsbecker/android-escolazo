@@ -8,15 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.arseb.escolazo.MainActivity" >
 
-    <TextView
-        android:id="@+id/textGeneratedNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="62dp"
-        android:text="@string/defaultStartingValue"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <Button
         android:id="@+id/buttonGenerar"
         android:layout_width="wrap_content"
@@ -25,5 +16,25 @@
         android:layout_centerVertical="true"
         android:onClick="generarAleatorio"
         android:text="@string/button_generate" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:text="@string/alfaVersionLabel"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textGeneratedNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonGenerar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="@string/defaultStartingValue"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
