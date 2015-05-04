@@ -41,8 +41,8 @@ public class MainActivity extends ActionBarActivity {
     	CharSequence myNumbers;
     	TextView textElement = (TextView) findViewById(R.id.textGeneratedNumber);
         textElement.setText(getString(R.string.defaultStartingValue));
-        //Valor hardcodeado por el momento para probar si devuelve los números necesarios para el Quini6.
-    	myNumbers = myRandomGenerator.testRandomNumber(45,6);
+        //Valor hardcodeado por el momento para probar si devuelve los números necesarios para el Loto 5.
+    	myNumbers = myRandomGenerator.testRandomNumber(0, 36, 5);
     	textElement.setText(myNumbers);
 
     }
