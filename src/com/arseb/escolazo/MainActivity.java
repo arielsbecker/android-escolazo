@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 
@@ -44,9 +45,35 @@ public class MainActivity extends ActionBarActivity {
     	GeneradorAzar myRandomGenerator = new GeneradorAzar();
     	CharSequence myNumbers;
     	TextView textElement = (TextView) findViewById(R.id.textGeneratedNumber);
-        textElement.setText(getString(R.string.defaultStartingValue));
-        //Valor hardcodeado por el momento para probar si devuelve los números necesarios para el Loto 5.
-    	myNumbers = myRandomGenerator.testRandomNumber(0, 36, 5);
+    	Spinner mySpinner = (Spinner) findViewById(R.id.spinnerListaJuegos);
+    	// TODO: cambiar el modo de obtener los valores del Spinner por una solución
+    	// más elegante; el método provisto ahora es provisorio.
+        switch (mySpinner.getSelectedItem().toString()) {
+	        case "Loto 5" :
+	        	myNumbers = myRandomGenerator.testRandomNumber(0, 36, 5);
+	        	break;
+	        case "Loto tradicional" :
+	        	myNumbers = myRandomGenerator.testRandomNumber(0, 41, 6);
+	        	break;
+	        case "Quini 6" :
+	        	myNumbers = myRandomGenerator.testRandomNumber(0, 45, 6);
+	        	break;
+	        case "Quiniela 2 cifras" :
+	        	myNumbers = myRandomGenerator.testRandomNumber(0, 99, 1);
+	        	break;
+	        case "Quiniela 3 cifras" :
+	        	myNumbers = myRandomGenerator.testRandomNumber(0, 999, 1);
+	        	break;
+	        case "Quiniela 4 cifras" :
+	        	myNumbers = myRandomGenerator.testRandomNumber(0, 9999, 1);
+	        	break;
+	        case "Quiniela poceada" :
+	        	myNumbers = myRandomGenerator.testRandomNumber(0, 99, 6);
+	        	break;
+	        default:
+	    		myNumbers = "Juego todavía no implementado";
+	    		break;
+        }
     	textElement.setText(myNumbers);
 
     }

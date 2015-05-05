@@ -8,16 +8,16 @@
 	<string name="defaultStartingValue">----</string>
 	<string name="alfaVersionLabel">Esta versión es alfa, y sólo sirve para obtener números para el juego Loto 5.</string>
  	<string-array name="juegosLoteriaNacional">
-        <item>Loto 5</item>
-        <item>Quini 6</item>
-        <item>Loto</item>
-        <item>Quiniela 2 cifras</item>
-        <item>Quiniela 3 cifras</item>
-        <item>Quiniela 4 cifras</item>
-        <item>Quiniela poceada</item>
-        <item>Brinco</item>
-        <item>Quiniela Plus</item>
-        <item>Mega Bola</item>
-        <item>Tombolina</item>
+        <item name="juego1">Loto 5</item>
+        <item name="juego2">Quini 6</item>
+        <item name="juego3">Loto tradicional</item>
+        <item name="juego4">Quiniela 2 cifras</item>
+        <item name="juego5">Quiniela 3 cifras</item>
+        <item name="juego6">Quiniela 4 cifras</item>
+        <item name="juego7">Quiniela poceada</item>
+        <item name="juego8">Brinco</item>
+        <item name="juego9">Quiniela Plus</item>
+        <item name="juego10">Mega Bola</item>
+        <item name="juego11">Tombolina</item>
     </string-array>
 </resources>

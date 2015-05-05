@@ -26,39 +26,27 @@
         android:layout_centerVertical="true"
         android:text="@string/defaultStartingValue"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <Button
-        android:id="@+id/buttonGenerar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textAlphaVersionWarning"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
-        android:onClick="generarAleatorio"
-        android:text="@string/button_generate" />
-
-
-
-    <TextView
-        android:id="@+id/textAlphaVersionWarning"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/spinnerListaJuegos"
-        android:layout_alignStart="@+id/spinnerListaJuegos"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:text="@string/alfaVersionLabel"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
     
         <Spinner
-        android:id="@+id/spinnerListaJuegos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textviewListaJuegos"
-        android:layout_alignStart="@+id/textviewListaJuegos"
-        android:layout_below="@+id/textviewListaJuegos"
-        android:layout_marginTop="32dp"
-        android:entries="@array/juegosLoteriaNacional" />
+            android:id="@+id/spinnerListaJuegos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textviewListaJuegos"
+            android:layout_alignStart="@+id/textviewListaJuegos"
+            android:layout_below="@+id/textviewListaJuegos"
+            android:layout_marginTop="32dp"
+            android:entries="@array/juegosLoteriaNacional"
+            android:gravity="center_horizontal"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/buttonGenerar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="80dp"
+            android:onClick="generarAleatorio"
+            android:text="@string/button_generate" />
 
 </RelativeLayout>
