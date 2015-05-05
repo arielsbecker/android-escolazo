@@ -20,6 +20,9 @@ public final class R {
         public static final int abc_slide_out_bottom=0x7f040008;
         public static final int abc_slide_out_top=0x7f040009;
     }
+    public static final class array {
+        public static final int juegosLoteriaNacional=0x7f0c0000;
+    }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -1917,12 +1920,12 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09003d;
         public static final int action_mode_bar_stub=0x7f09003c;
         public static final int action_mode_close_button=0x7f090025;
-        public static final int action_settings=0x7f090051;
+        public static final int action_settings=0x7f090054;
         public static final int activity_chooser_view_content=0x7f090026;
         public static final int alertTitle=0x7f090030;
         public static final int always=0x7f090019;
         public static final int beginning=0x7f090020;
-        public static final int buttonGenerar=0x7f090050;
+        public static final int buttonGenerar=0x7f090051;
         public static final int buttonPanel=0x7f090036;
         public static final int checkbox=0x7f090038;
         public static final int collapseActionView=0x7f09001a;
@@ -1971,14 +1974,17 @@ containing a value of this type.
         public static final int showCustom=0x7f090010;
         public static final int showHome=0x7f090011;
         public static final int showTitle=0x7f090012;
+        public static final int spinnerListaJuegos=0x7f090053;
         public static final int split_action_bar=0x7f090004;
         public static final int src_atop=0x7f090016;
         public static final int src_in=0x7f090017;
         public static final int src_over=0x7f090018;
         public static final int submit_area=0x7f09004b;
         public static final int tabMode=0x7f09000c;
-        public static final int textGeneratedNumber=0x7f09004f;
+        public static final int textAlphaVersionWarning=0x7f090052;
+        public static final int textGeneratedNumber=0x7f090050;
         public static final int textSpacerNoButtons=0x7f090033;
+        public static final int textviewListaJuegos=0x7f09004f;
         public static final int title=0x7f09002c;
         public static final int title_template=0x7f09002f;
         public static final int topPanel=0x7f09002e;
@@ -2049,7 +2055,7 @@ containing a value of this type.
         public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class menu {
-        public static final int main=0x7f0c0000;
+        public static final int main=0x7f0d0000;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -2111,12 +2117,13 @@ containing a value of this type.
         /**  Content description for the Toolbar icon used to collapse an expanded action mode. [CHAR LIMIT=NONE] 
          */
         public static final int abc_toolbar_collapse_description=0x7f0a0004;
-        public static final int action_settings=0x7f0a0013;
-        public static final int app_name=0x7f0a0011;
+        public static final int action_settings=0x7f0a0014;
+        public static final int alfaVersionLabel=0x7f0a0017;
+        public static final int app_name=0x7f0a0012;
         public static final int button_generate=0x7f0a0015;
         public static final int defaultStartingValue=0x7f0a0016;
-        public static final int default_value_generated_number=0x7f0a0014;
-        public static final int hello_world=0x7f0a0012;
+        public static final int hello_world=0x7f0a0013;
+        public static final int lvGameDescription=0x7f0a0011;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0b0040;

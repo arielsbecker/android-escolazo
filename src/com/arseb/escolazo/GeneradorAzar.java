@@ -1,9 +1,9 @@
 package com.arseb.escolazo;
 
-import java.util.Arrays;
-import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Random;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class GeneradorAzar {
 	
@@ -13,11 +13,12 @@ public class GeneradorAzar {
 		StringBuffer strAux=new StringBuffer("");
 		// Si el parámetro howMany es igual o mayor a uno...
 		if (howMany > 0) {
-			Object[] myNumber = new Object[howMany];
+			Set<Integer> mySet = new TreeSet<Integer>();
 			// obtenemos una serie de números aleatorios.
-			myNumber = GenerateRandomNumbers(minNumber, maxNumber, howMany);	
-			for (int i = 1; i < howMany + 1; i++){
-				strAux.append(myNumber[i]);
+			mySet = GenerateRandomNumbers(minNumber, maxNumber, howMany);
+			Iterator<Integer> iter = mySet.iterator();
+			while(iter.hasNext()){
+				strAux.append(iter.next());
 				// Añadimos una coma y un espacio para separar los números ya ordenados.
 				strAux.append(", ");
 			}
@@ -29,29 +30,25 @@ public class GeneradorAzar {
 		return strAux.toString();
 	}
 	
-	private Object[] GenerateRandomNumbers(int minValue, int maxValue, int howMany){
+	private Set<Integer> GenerateRandomNumbers(int minValue, int maxValue, int howMany){
 		// Este método devuelve un array, ordenado, de valores pseudoaleatorios
 		// únicos.
 		// maxValue define el valor máximo, inclusivo, que puede tener cada número.
 		// minValue define el valor mínimo, inclusivo, que puede tener cada número.
 		// howMany define la cantidad de números a generar.
 		Random myRandomGenerator = new Random();
+		// Creamos un TreeSet para evitar luego que los mismos se repitan.
+		Set<Integer> mySet = new TreeSet<Integer>();
 		// Chequeamos si los valores mínimos y máximos son distintos entre sí,
 		// si maxValue es mayor a minValue y si howMany es mayor a cero.
-		if (maxValue > minValue && howMany > 0){
+		if ( howMany > 0 && maxValue > minValue ){
 			// Random.nextInt(int n) devuelve un valor acotado entre {0; n-1}.
 			// Es necesario calcular, en base a esto, cuál es el "decalaje"
 			// necesario para obtener los intervalos dados.
 			// Esta variable almacenará la distancia entre minValue y maxValue.
 			int intDistance = maxValue - minValue;
-			// Verificamos que la cantidad de números solicitados sea menor al rango:
-			if (intDistance < howMany){
-				// Incrementamos en uno howMany para no hacerlo en el bucle for.
-				howMany++;
-				// Inicializamos el array de enteros:
-				Object[] myArray = new Object[howMany];
-				// Creamos un Set de números para evitar luego que los mismos se repitan.
-				Set mySet = new HashSet();
+			// Verificamos que la cantidad de números solicitados sea menor o igual al rango:
+			if (intDistance >= howMany) {
 				int intAux = 0;
 				// Ingresamos al bucle de generación de números.
 				while (mySet.size() < howMany) {
@@ -65,22 +62,17 @@ public class GeneradorAzar {
 					// Asignamos el valor al Set:
 					mySet.add(intAux);
 				}
-				// Convertimos el Set en un array.
-				myArray = mySet.toArray();
-				// Finalmente ordenamos el array.
-				Arrays.sort(myArray);
-				return myArray;
+				
+				return mySet;   
 			}
 			else {
-				// Si la cantidad de números solicitados es mayor al rango previsto, se devuelve sólo un cero.
-				Object[] myArray = {0};
-				return myArray;
+				mySet.add(0);
+				return mySet;
 			}
 		}
 		else {
-			// Si los parámetros están mal, se devuelve un array con sólo un cero dentro.
-			Object[] myArray = {0};
-			return myArray;
+			mySet.add(0);
+			return mySet;
 		}
 	}
 	

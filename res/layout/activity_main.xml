@@ -8,33 +8,57 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.arseb.escolazo.MainActivity" >
 
-    <Button
-        android:id="@+id/buttonGenerar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:onClick="generarAleatorio"
-        android:text="@string/button_generate" />
-
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textviewListaJuegos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
-        android:text="@string/alfaVersionLabel"
+        android:layout_marginTop="10dp"
+        android:text="@string/lvGameDescription"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/textGeneratedNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonGenerar"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
+        android:layout_centerVertical="true"
         android:text="@string/defaultStartingValue"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/buttonGenerar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textAlphaVersionWarning"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:onClick="generarAleatorio"
+        android:text="@string/button_generate" />
+
+
+
+    <TextView
+        android:id="@+id/textAlphaVersionWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerListaJuegos"
+        android:layout_alignStart="@+id/spinnerListaJuegos"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/alfaVersionLabel"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+        <Spinner
+        android:id="@+id/spinnerListaJuegos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textviewListaJuegos"
+        android:layout_alignStart="@+id/textviewListaJuegos"
+        android:layout_below="@+id/textviewListaJuegos"
+        android:layout_marginTop="32dp"
+        android:entries="@array/juegosLoteriaNacional" />
 
 </RelativeLayout>

@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<string name="lvGameDescription">Seleccione un juego de la lista.</string>
     <string name="app_name">Escolazo</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 	<string name="button_generate">Generar</string>
 	<string name="defaultStartingValue">----</string>
 	<string name="alfaVersionLabel">Esta versión es alfa, y sólo sirve para obtener números para el juego Loto 5.</string>
+ 	<string-array name="juegosLoteriaNacional">
+        <item>Loto 5</item>
+        <item>Quini 6</item>
+        <item>Loto</item>
+        <item>Quiniela 2 cifras</item>
+        <item>Quiniela 3 cifras</item>
+        <item>Quiniela 4 cifras</item>
+        <item>Quiniela poceada</item>
+        <item>Brinco</item>
+        <item>Quiniela Plus</item>
+        <item>Mega Bola</item>
+        <item>Tombolina</item>
+    </string-array>
 </resources>

@@ -1,5 +1,6 @@
 package com.arseb.escolazo;
 
+import android.support.v4.widget.SimpleCursorAdapter;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,9 @@ import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
+	
+    // Adaptador para mostrar los datos en el listview.
+    //SimpleCursorAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
