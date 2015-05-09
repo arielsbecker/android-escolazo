@@ -9,7 +9,7 @@ public class GeneradorAzar {
 	
 	// El siguiente método permite obtener un número aleatorio.
 	// TODO: crear un array de números, ordenarlos y luego pasarlos a la cadena.
-	public CharSequence testRandomNumber(int minNumber, int maxNumber, int howMany) {
+	public CharSequence GenerarJuego(int minNumber, int maxNumber, int howMany) {
 		StringBuffer strAux=new StringBuffer("");
 		// Si el parámetro howMany es igual o mayor a uno...
 		if (howMany > 0) {

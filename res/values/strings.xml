@@ -2,11 +2,10 @@
 <resources>
 	<string name="lvGameDescription">Seleccione un juego de la lista.</string>
     <string name="app_name">Escolazo</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configuración</string>
 	<string name="button_generate">Generar</string>
 	<string name="defaultStartingValue">----</string>
-	<string name="alfaVersionLabel">Esta versión es alfa, y sólo sirve para obtener números para el juego Loto 5.</string>
+	<string name="stringGameNotImplementedYet">Juego aun no implementado</string>
  	<string-array name="juegosLoteriaNacional">
         <item name="juego1">Loto 5</item>
         <item name="juego2">Quini 6</item>
@@ -16,8 +15,6 @@
         <item name="juego6">Quiniela 4 cifras</item>
         <item name="juego7">Quiniela poceada</item>
         <item name="juego8">Brinco</item>
-        <item name="juego9">Quiniela Plus</item>
-        <item name="juego10">Mega Bola</item>
-        <item name="juego11">Tombolina</item>
+        <item name="juego9">Tombolina</item>
     </string-array>
 </resources>
