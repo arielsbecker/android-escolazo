@@ -17,7 +17,7 @@ public class GeneradorAzar {
 			// obtenemos una serie de números aleatorios.
 			mySet = GenerateRandomNumbers(minNumber, maxNumber, howMany);
 			Iterator<Integer> iter = mySet.iterator();
-			while(iter.hasNext()){
+			while(iter.hasNext()) {
 				strAux.append(iter.next());
 				// Añadimos una coma y un espacio para separar los números ya ordenados.
 				strAux.append(", ");
@@ -26,7 +26,6 @@ public class GeneradorAzar {
 			strAux.delete(strAux.length()- 2, strAux.length());
 		}
 		// Armamos la cadena que finalmente se mostrará.
-
 		return strAux.toString();
 	}
 	
@@ -51,17 +50,17 @@ public class GeneradorAzar {
 			if (intDistance >= howMany) {
 				int intAux = 0;
 				// Ingresamos al bucle de generación de números.
-				while (mySet.size() < howMany) {
+				do {
 					// Obtenemos un valor aleatorio entre 0 e intDistance
 					// Recordemos que intDistance debe incrementarse en uno para que incluya su propio valor
 					// como máximo posible.
-					intAux = myRandomGenerator.nextInt(intDistance + 1);
+					intAux = myRandomGenerator.nextInt(intDistance);
 					// Ajustamos el valor obtenido para ubicarlo dentro del rango definido
 					// por minValue y maxValue.
 					intAux = intAux + minValue;
 					// Asignamos el valor al Set:
 					mySet.add(intAux);
-				}
+				} while (mySet.size() < howMany);
 				
 				return mySet;   
 			}
