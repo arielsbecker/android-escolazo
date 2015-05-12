@@ -6,8 +6,7 @@ Este programa está pensado para brindarle al apostador las estadísticas,
 números atrasados y más. Está orientado a la plataforma Android y
 desarrollado en Java desde el IDE Eclipse / ADT.
 
-Esta primera versión no hace mucho, y sólo debe tenerse como hold-in de
-futuras versiones.
+La actual versión en la rama 'master' contiene la funcionalidad básica.
 
 Existen tres ramas o branches en este repositorio: 
 · master: donde estará la última versión estable;
