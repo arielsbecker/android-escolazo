@@ -68,7 +68,6 @@ public class MainActivity extends ActionBarActivity {
     
     public void generarAleatorio(View view){
     	// Al presionar el botón "Generar".
-    	GeneradorAzar myRandomGenerator = new GeneradorAzar();
     	CharSequence myNumbers;
     	TextView textElement = (TextView) findViewById(R.id.textGeneratedNumber);
     	// TODO: mejorar la clase GeneradorAzar para que genere una cadena ya lista
@@ -76,39 +75,39 @@ public class MainActivity extends ActionBarActivity {
     	switch (mySpinnerSelection){
     	case 1 :
         	// Loto 5: cinco números del 0 al 36.
-    		myNumbers = myRandomGenerator.GenerarJuego(0, 36, 5);
+    		myNumbers = GeneradorAzar.generarJuego(0, 36, 5);
     		break;
     	case 2 :
         	// Quini 6: seis números del 0 al 45.
-    		myNumbers = myRandomGenerator.GenerarJuego(0, 45, 6);
+    		myNumbers = GeneradorAzar.generarJuego(0, 45, 6);
     		break;
     	case 3 :
     		// Loto tradicional: seis números del 0 al 41.
-    		myNumbers = myRandomGenerator.GenerarJuego(0, 41, 6);
+    		myNumbers = GeneradorAzar.generarJuego(0, 41, 6);
     		break;
     	case 4 :
     		// Quiniela 2 cifras: un número del 0 al 99.
-    		myNumbers = myRandomGenerator.GenerarJuego(0, 99, 1);
+    		myNumbers = GeneradorAzar.generarJuego(0, 99, 1);
     		break;
     	case 5 :
     		// Quiniela 3 cifras: un número del 0 al 999.
-    		myNumbers = myRandomGenerator.GenerarJuego(0, 999, 1);
+    		myNumbers = GeneradorAzar.generarJuego(0, 999, 1);
     		break;
     	case 6 :
     		// Quiniela 4 cifras: un número del 0 al 9999.
-    		myNumbers = myRandomGenerator.GenerarJuego(0, 9999, 1);
+    		myNumbers = GeneradorAzar.generarJuego(0, 9999, 1);
     		break;
     	case 7 :
     		// Quiniela poceada: ocho números del 0 al 99.
-    		myNumbers = myRandomGenerator.GenerarJuego(0, 99, 8);
+    		myNumbers = GeneradorAzar.generarJuego(0, 99, 8);
     		break;
     	case 8 :
     		// Brinco: seis números del 0 a 39.
-    		myNumbers = myRandomGenerator.GenerarJuego(0, 39, 6);
+    		myNumbers = GeneradorAzar.generarJuego(0, 39, 6);
     		break;
     	case 9 :
     		// Tombolina: de 3 a 7 números del 0 al 99.
-    		myNumbers = myRandomGenerator.GenerarJuego(0, 99, 7);
+    		myNumbers = GeneradorAzar.generarJuego(0, 99, 7);
     		break;
     	default :
     		// Otro juego, no implementado
