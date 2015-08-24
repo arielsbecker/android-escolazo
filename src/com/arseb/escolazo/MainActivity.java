@@ -18,7 +18,7 @@ public class MainActivity extends ActionBarActivity {
 	// Esta variable se modificará desde OnItemSelected.
 	private int mySpinnerSelection = 0;
 
-    @Override
+	@Override
     protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
