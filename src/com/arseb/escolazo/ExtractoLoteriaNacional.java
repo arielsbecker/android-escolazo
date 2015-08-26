@@ -2,6 +2,7 @@ package com.arseb.escolazo;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.ConnectException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -13,6 +14,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /*
@@ -25,7 +27,6 @@ import org.xml.sax.SAXException;
 // ToDo: ver si las clases URLConnReader y XMLParser se pueden hacer inner classes de ésta.
 public class ExtractoLoteriaNacional {
 	private Date myDate;
-	private Document mydom;
 	
 	@SuppressWarnings("unused")
 	private CharSequence myCodedDate;
@@ -43,16 +44,18 @@ public class ExtractoLoteriaNacional {
 		// TODO Revisar si hace falta añadir algo al constructor
 	}
 	
-	private void parseXML (InputStream myinput)
+	private NodeList parseXML (InputStream myinput)
 			throws ParserConfigurationException, SAXException, IOException
 	{
 		// ToDo: agregar excepciones no contempladas.
 		DocumentBuilderFactory mydombuilderfactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder mydombuilder = mydombuilderfactory.newDocumentBuilder();
-		mydom = mydombuilder.parse(myinput); 
+		Document mydom = mydombuilder.parse(myinput);
+		return mydom.getElementsByTagName("Sorteo");
+		
 	}
 	
-	private InputStream getfile (URL myurl) throws IOException, ConnectException, MalformedURLException {
+	private InputStream getFile (URL myurl) throws IOException, ConnectException, MalformedURLException {
 		// ToDo: agregar excepciones no previstas aun.
         URLConnection myurlconn = myurl.openConnection();
         InputStream mybuffer = myurlconn.getInputStream();
@@ -60,9 +63,12 @@ public class ExtractoLoteriaNacional {
         
 	}
 	
-	public void obtenersorteoQuinielaNacionalTest(){
-		CharSequence myuri = URL_QUINIELANACIONAL + "?" + URI_PARAMETER_FECHASORTEO + "20150823" + "&" + URI_PARAMETER_TIPOSORTEO + NOCTURNA;
-		System.out.print(myuri);
+	public String obtenerSorteoQuinielaNacionalTest() throws ConnectException, IOException, ParserConfigurationException, SAXException{
+		
+		URL myuri = new URL(URL_QUINIELANACIONAL + "?" + URI_PARAMETER_FECHASORTEO + "20150823" + "&" + URI_PARAMETER_TIPOSORTEO + NOCTURNA);
+		InputStream myinputstream = getFile(myuri);
+		NodeList mynodelist = parseXML (myinputstream);
+		return mynodelist.item(0).toString();
 	}
 
 	public Date getMyDate() {
